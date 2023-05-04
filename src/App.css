@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+html,
+body {
+  height: 100%;
+  overflow-y: scroll;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -25,7 +31,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #e9e6df;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +41,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#main-page {
+  scroll-behavior: smooth;
 }

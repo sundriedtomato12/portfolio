@@ -16,5 +16,8 @@
     "noEmit": true,
     "jsx": "react"
   },
+  "rules": {
+    "no-tabs": 0
+  },
   "include": ["src"]
 }
