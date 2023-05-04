@@ -22,10 +22,11 @@ export function NavBar ({ currentPage, setCurrentPage }: NavBarProps): JSX.Eleme
   }
 
   const navButtonStyle = {
-    fontSize: isDesktop ? '16px' : '14px',
+    height: '48px',
+    fontSize: isDesktop ? '16px' : '12px',
     fontFamily: 'Fira Code',
     width: 'fit-content',
-    marginX: isDesktop ? '10px' : '5px',
+    marginX: isDesktop ? '10px' : '2px',
     padding: 0,
     lineHeight: '3em',
     '&:hover': {
@@ -37,7 +38,7 @@ export function NavBar ({ currentPage, setCurrentPage }: NavBarProps): JSX.Eleme
   const logo = '<f>'
 
   return (
-		<AppBar position='fixed' className='navbar' sx={{ height: '48px', width: '100%', minWidth: '20rem', zIndex: 999, backgroundColor: colorPalette.navy.normal, boxShadow: '0 7px 14px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.2)', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', paddingX: isDesktop ? '22px' : '12px' }}>
+		<AppBar position='fixed' className='navbar' sx={{ height: '48px', width: '100%', minWidth: '20rem', zIndex: 999, backgroundColor: colorPalette.navy.normal, boxShadow: '0 7px 14px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.2)', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', paddingX: isDesktop ? '22px' : '10px' }}>
       <Box component={'a'} sx={{
         textDecoration: 'none',
         width: 'fit-content',
@@ -48,7 +49,7 @@ export function NavBar ({ currentPage, setCurrentPage }: NavBarProps): JSX.Eleme
           textShadow: `2px 2px 1px ${colorPalette.green}`
         }
       }} href='/' >
-        <Typography fontSize={'20px'} fontWeight={700} fontFamily={'Source Code Pro'} color={colorPalette.white}>{logo}</Typography>
+        <Typography fontSize={isDesktop ? '20px' : '16px'} fontWeight={700} fontFamily={'Source Code Pro'} color={colorPalette.white}>{logo}</Typography>
       </Box>
       <Box>
 			<Button disableRipple href='/' onClick={(event) => { handleClick('home', event) }} sx={{ ...navButtonStyle, borderBottom: currentPage === 'home' ? activeNavBorderBottom : 'none', color: currentPage === 'home' ? colorPalette.green : colorPalette.slate.lightest }}>
