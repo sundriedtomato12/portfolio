@@ -78,12 +78,12 @@ export function MainPage (): JSX.Element {
             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <Typography sx={{ fontFamily: 'Fira Code', fontSize: isDesktop ? '18px' : '14px', fontWeight: 700 }}>{props.name}</Typography>
             {(props.url != null) && <LaunchIcon
-          sx={{ '&:hover': { color: colorPalette.blue, cursor: 'pointer' }, fontSize: '18px', fontWeight: '700', color: colorPalette.slate.dark }} onClick={() => window.open(props.url, '_blank')} />}
+          sx={{ '&:hover': { color: colorPalette.blue, cursor: 'pointer' }, fontSize: '20px', fontWeight: '700', color: colorPalette.slate.dark }} onClick={() => window.open(props.url, '_blank')} />}
             </Box>
             <Typography sx={{ fontFamily: 'Roboto', fontSize: isDesktop ? '16px' : '12px' }}>{props.description}</Typography>
           </Box>
-          <Box sx={{ margin: '0 auto', width: isDesktop ? '31vw' : '100%', height: isDesktop ? '33vh' : '22vh' }}>
-            <Box component={'img'} src={props.thumbnail} maxHeight={'100%'} maxWidth={'100%'} sx={{ borderRadius: '4px' }} />
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: isDesktop ? '33vh' : '22vh' }}>
+            <Box component={'img'} src={props.thumbnail} maxHeight={'100%'} maxWidth={'98%'} sx={{ borderRadius: '4px' }} />
           </Box>
         </Paper>
       </Box>
