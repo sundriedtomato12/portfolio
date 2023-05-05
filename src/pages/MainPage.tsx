@@ -96,7 +96,7 @@ export function MainPage (): JSX.Element {
       setCurrentPage('contact')
     } else if ((projects != null) && scrollY > projects) {
       setCurrentPage('contact')
-    } else if ((about != null) && scrollY > about + 50) {
+    } else if ((about != null) && scrollY > about + 80) {
       setCurrentPage('projects')
     } else if ((home != null) && scrollY > home + 30) {
       setCurrentPage('about')
@@ -142,7 +142,7 @@ export function MainPage (): JSX.Element {
     return (
       <Dialog onClose={handleDialogClose} open={isSlideClicked}>
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Paper sx={{ backgroundColor: colorPalette.slate.lightest, height: isDesktop ? '60vh' : '36vh', width: isDesktop ? '44vw' : '100%', padding: '16px 20px 16px 20px' }}>
+        <Paper sx={{ backgroundColor: colorPalette.slate.lightest, height: isDesktop ? '60vh' : '70%', width: isDesktop ? '44vw' : '100%', padding: '16px 20px 16px 20px' }}>
           <Box sx={{ mb: isDesktop ? '14px' : '8px' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: '8px' }}>
             <Typography sx={{ fontFamily: 'Fira Code', fontSize: isDesktop ? '22px' : '14px', fontWeight: 700 }}>{props.name}</Typography>
@@ -156,7 +156,7 @@ export function MainPage (): JSX.Element {
               }
             })}</Typography>
           </Box>
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: isDesktop ? '44vh' : '26vh' }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: isDesktop ? '44vh' : '60%' }}>
             <Box component={'video'} src={props.video} autoPlay loop playsInline muted disablePictureInPicture maxHeight={'100%'} maxWidth={'100%'} sx={{ borderRadius: '4px' }} />
           </Box>
         </Paper>
@@ -187,13 +187,13 @@ export function MainPage (): JSX.Element {
             I&apos;m a Full Stack Developer based in Singapore with a passion for learning new tech stacks and building innovative products for the web. With a keen eye for design and a dedication to creating outstanding user interfaces, I take pride in my ability to bring fresh product ideas to life.
 					</Typography>
 				</Box>
-				<Box id="about" height={isDesktop ? '100vh' : '130vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'left', color: colorPalette.white }}>
+				<Box id="about" height={isDesktop ? '100vh' : 'fit-content'} sx={{ pb: isDesktop ? 0 : '16vh', paddingX: '10vw', display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'left', color: colorPalette.white }}>
           <Typography sx={{ marginTop: isDesktop ? '15vh' : '10vh', fontSize: '28px', fontWeight: 700, fontFamily: 'Fira Code', color: colorPalette.green.light }}>
             About me
           </Typography>
           <Grid container sx={{ display: 'flex', flexDirection: isDesktop ? 'row-reverse' : 'column', alignItems: 'center' }} spacing={isDesktop ? 5 : undefined}>
             <Grid item xs={isDesktop ? 3 : undefined}>
-              <Box component='img' src={Profile} sx={{ marginTop: isDesktop ? '0px' : '16px', height: 'clamp(120px, 20vh, 160px)', width: 'fit-content', overflow: 'clip', borderRadius: '100px' }}/>
+              <Box component='img' src={Profile} sx={{ marginTop: isDesktop ? '0px' : '16px', height: 'clamp(120px, 20vh, 160px)', width: 'auto', overflow: 'clip', borderRadius: '100px' }}/>
             </Grid>
             <Grid item xs={isDesktop ? 9 : undefined}>
               <Typography sx={{ fontSize: '16px', fontFamily: 'Roboto' }}>
@@ -236,8 +236,6 @@ export function MainPage (): JSX.Element {
               modules={[Pagination, Navigation]}
               className="project-swiper"
               onSlideChangeTransitionStart={(slide) => {
-                console.log('active index', slide.activeIndex)
-                console.log('sldie clicked', slideClicked)
                 setSlideClicked(projects[slide.activeIndex])
               }}
             >
