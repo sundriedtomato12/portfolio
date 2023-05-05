@@ -44,12 +44,6 @@
   text-align: center;
 }
 
-html,
-body {
-  height: 100%;
-  overflow-y: scroll;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
