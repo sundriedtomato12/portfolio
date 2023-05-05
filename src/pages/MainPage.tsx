@@ -126,7 +126,7 @@ export function MainPage (): JSX.Element {
             Get in touch
           </Typography>
           <Typography sx={{ mt: '14px', fontSize: '16px', fontFamily: 'Roboto' }}>
-            You can drop me an email or message me on Linkedin for my latest resume! Otherwise, feel free to check out my other socials:
+            Feel free to drop me an email or message me on LinkedIn if you&apos;d like to connect!
 					</Typography>
           <Box sx={{ mt: '14px' }}>
             <MailIcon
