@@ -10,7 +10,7 @@ export function handleScroll (
 
   if (contact != null && scrollY >= contact) {
     setCurrentPage('contact')
-  } else if (projects != null && scrollY > projects) {
+  } else if (projects != null && scrollY > projects + 20) {
     setCurrentPage('contact')
   } else if (about != null && scrollY > about + 80) {
     setCurrentPage('projects')

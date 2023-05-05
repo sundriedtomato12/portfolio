@@ -76,7 +76,7 @@ export function MainPage (): JSX.Element {
             <Grid item xs={isDesktop ? 9 : undefined}>
               <Typography sx={{ fontSize: '16px', fontFamily: 'Roboto' }}>
                 <p>
-                Hello! I&apos;m Fel. My interest in web development started in high school when I learnt how to do stuff like customising my cursor and changing the color and font of Blogspot.com chatbox (hello millenials?). But I only decided to pursue software engineering as a career in 2021 by signing up for a bootcamp by <Link href='https://www.rocketacademy.co' sx={{ textDecoration: 'none', color: colorPalette.green.light, '&:hover': { textDecoration: 'underline', color: colorPalette.green.light } }} target='_blank' rel="noreferrer">Rocket Academy.</Link> Since graduating, I&apos;ve done multiple personal projects and I&apos;m currently building game-changing digital products at <Link href='https://www.circles.life' sx={{ textDecoration: 'none', color: colorPalette.green.light, '&:hover': { textDecoration: 'underline', color: colorPalette.green.light } }} target='_blank' rel="noreferrer">Circles.Life</Link>.
+                Hello! I&apos;m Fel. My interest in web development started in high school when I learnt how to do stuff like customising my cursor and changing the color and font of my Blogspot.com chatbox (hello millenials?). But I only decided to pursue software engineering as a career in 2021 by signing up for a bootcamp by <Link href='https://www.rocketacademy.co' sx={{ textDecoration: 'none', color: colorPalette.green.light, '&:hover': { textDecoration: 'underline', color: colorPalette.green.light } }} target='_blank' rel="noreferrer">Rocket Academy.</Link> Since graduating, I&apos;ve done multiple personal projects and I&apos;m currently building game-changing digital products at <Link href='https://www.circles.life' sx={{ textDecoration: 'none', color: colorPalette.green.light, '&:hover': { textDecoration: 'underline', color: colorPalette.green.light } }} target='_blank' rel="noreferrer">Circles.Life</Link>.
                 </p>
                 <p>
                 Here are some technologies that I&apos;ve been working with recently:
@@ -98,9 +98,10 @@ export function MainPage (): JSX.Element {
         </Grid>
         </Box>
 				<Box id="projects" height={'100vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'left', color: colorPalette.white }}>
-          <Typography sx={{ mt: isDesktop ? '15vh' : '10vh', mb: '42px', fontSize: isDesktop ? '32px' : '24px', fontWeight: 700, fontFamily: 'Fira Code', color: colorPalette.green.light }}>
+          <Typography sx={{ mt: isDesktop ? '15vh' : '10vh', mb: '16px', fontSize: isDesktop ? '32px' : '24px', fontWeight: 700, fontFamily: 'Fira Code', color: colorPalette.green.light }}>
             Projects
           </Typography>
+           <Typography sx={{ fontSize: '16px', fontFamily: 'Roboto', mb: '20px' }}>Check out some stuff I built!</Typography>
           <Box height={'60vh'}>
             <Swiper
               direction={'horizontal'}
@@ -120,7 +121,7 @@ export function MainPage (): JSX.Element {
             </Swiper>
           </Box>
 				</Box>
-				<Box id="contact" height={'75vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', color: colorPalette.white }}>
+				<Box id="contact" height={'70vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', color: colorPalette.white }}>
           <Box sx={{ display: 'flex', alignItems: 'left', flexDirection: 'column' }}>
           <Typography sx={{ marginTop: isDesktop ? '15vh' : '8vh', fontSize: '28px', fontWeight: 700, fontFamily: 'Fira Code', color: colorPalette.green.light }}>
             Get in touch
