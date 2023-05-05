@@ -10,6 +10,7 @@ export function SocialsBar (): JSX.Element {
     fontSize: '32px',
     color: colorPalette.white,
     '&:hover': {
+      transform: 'translateY(-1px)',
       color: colorPalette.green.light,
       cursor: 'pointer'
     }
