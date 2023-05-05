@@ -86,7 +86,7 @@ export function MainPage (): JSX.Element {
                 <Stack sx={{ marginRight: '24px' }}>
                   <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>Typescript</Typography>
                   <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>Javascript</Typography>
-                  <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>ReactJs</Typography>
+                  <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>React</Typography>
                 </Stack>
                 <Stack>
                   <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>React Native</Typography>
