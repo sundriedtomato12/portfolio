@@ -47,7 +47,7 @@ export function MainPage (): JSX.Element {
   return (
     <Box style={{ width: '100%' }}>
 			<NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-			<Box ref={ref} onScroll={() => { handleScroll(ref, setCurrentPage) }} className='main-page' style={{ height: '100vh', backgroundColor: colorPalette.navy.dark, overflowY: 'scroll', padding: isDesktop ? '0px 24px 24px 24px' : '0px 10px 10px 10px' }}>
+			<Box ref={ref} onScroll={() => { handleScroll(ref, setCurrentPage) }} className='main-page' style={{ height: '100vh', backgroundColor: colorPalette.navy.dark, overflowY: 'scroll', padding: isDesktop ? '0px 24px 0px 24px' : '0px 10px 0px 10px' }}>
 				<Box id="home" height={'100vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center', color: colorPalette.white }}>
           <Box sx={{ display: isDesktop ? 'flex' : 'block' }}>
 					<Typography sx={{ fontSize: isDesktop ? '32px' : '24px', color: colorPalette.green.light, fontFamily: 'Roboto', marginRight: '12px' }}>
@@ -143,9 +143,9 @@ export function MainPage (): JSX.Element {
             />
           </Box>
           </Box>
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pb: '10px' }}>
             <Typography fontSize={isDesktop ? '13px' : '10px'} fontFamily={'Fira Code'} color={colorPalette.slate.light} >Built by Felicia Tan, 2023</Typography><GitHubIcon
-            sx={{ ...iconStyle, fontSize: isDesktop ? '13px' : '10px', color: colorPalette.slate.light, ml: '6px' }}
+            sx={{ ...iconStyle, fontSize: isDesktop ? '14px' : '10px', color: colorPalette.slate.light, ml: '6px', mb: '2px' }}
             onClick={() => window.open('https://github.com/sundriedtomato12/portfolio', '_blank')}
             />
           </Box>
