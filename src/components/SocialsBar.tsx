@@ -17,7 +17,7 @@ export function SocialsBar (): JSX.Element {
   const isDesktop = useMediaQuery('(min-width:800px)')
 
   return (
-    <Box sx={{ width: '30px', height: '200px', position: 'absolute', left: isDesktop ? '20px' : '2.5vw', bottom: '10px' }}>
+    <Box sx={{ position: 'absolute', left: isDesktop ? '20px' : '2.5vw', bottom: '0px' }}>
     <Stack direction='column' spacing={2} alignItems={'center'}>
             <MailIcon
             sx={{ ...iconStyle }}

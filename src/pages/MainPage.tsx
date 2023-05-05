@@ -166,9 +166,8 @@ export function MainPage (): JSX.Element {
   }
 
   return (
-		<Box style={{ width: '100%' }}>
+    <Box style={{ width: '100%' }}>
 			<NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <SocialsBar />
 			<Box ref={ref} onScroll={handleScroll} className='main-page' style={{ height: '100vh', backgroundColor: colorPalette.navy.dark, overflowY: 'scroll', padding: isDesktop ? '0px 24px 24px 24px' : '0px 10px 10px 10px' }}>
 				<Box id="home" height={'100vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center', color: colorPalette.white }}>
           <Box sx={{ display: isDesktop ? 'flex' : 'block' }}>
@@ -191,17 +190,14 @@ export function MainPage (): JSX.Element {
           <Typography sx={{ marginTop: isDesktop ? '15vh' : '10vh', fontSize: '28px', fontWeight: 700, fontFamily: 'Fira Code', color: colorPalette.green.light }}>
             About me
           </Typography>
-          <Grid container sx={{ display: 'flex', flexDirection: isDesktop ? 'row-reverse' : 'column', alignItems: 'center' }} spacing={isDesktop ? 5 : undefined}>
+          <Grid container sx={{ display: 'flex', flexDirection: isDesktop ? 'row-reverse' : 'column', alignItems: 'center' }} spacing={isDesktop ? 6 : undefined}>
             <Grid item xs={isDesktop ? 3 : undefined}>
               <Box component='img' src={Profile} sx={{ marginTop: isDesktop ? '0px' : '16px', height: 'clamp(120px, 20vh, 160px)', width: 'auto', overflow: 'clip', borderRadius: '100px' }}/>
             </Grid>
             <Grid item xs={isDesktop ? 9 : undefined}>
               <Typography sx={{ fontSize: '16px', fontFamily: 'Roboto' }}>
                 <p>
-                Hello! I&apos;m Fel. My interest in web development started in high school when I learnt how to do stuff like customising my cursor and changing the color and font of Blogspot.com chatbox (hello millenials?). But I only decided to pursue software engineering as a career in 2021 by signing up for a bootcamp by <Link href='https://www.rocketacademy.co' sx={{ textDecoration: 'none', color: colorPalette.green.light, '&:hover': { textDecoration: 'underline', color: colorPalette.green.light } }} target='_blank' rel="noreferrer">Rocket Academy.</Link>
-                </p>
-                <p>
-                Since graduating, I&apos;ve done multiple personal projects and I&apos;m currently building game-changing digital products at <Link href='https://www.circles.life' sx={{ textDecoration: 'none', color: colorPalette.green.light, '&:hover': { textDecoration: 'underline', color: colorPalette.green.light } }} target='_blank' rel="noreferrer">Circles.Life</Link>.
+                Hello! I&apos;m Fel. My interest in web development started in high school when I learnt how to do stuff like customising my cursor and changing the color and font of Blogspot.com chatbox (hello millenials?). But I only decided to pursue software engineering as a career in 2021 by signing up for a bootcamp by <Link href='https://www.rocketacademy.co' sx={{ textDecoration: 'none', color: colorPalette.green.light, '&:hover': { textDecoration: 'underline', color: colorPalette.green.light } }} target='_blank' rel="noreferrer">Rocket Academy.</Link> Since graduating, I&apos;ve done multiple personal projects and I&apos;m currently building game-changing digital products at <Link href='https://www.circles.life' sx={{ textDecoration: 'none', color: colorPalette.green.light, '&:hover': { textDecoration: 'underline', color: colorPalette.green.light } }} target='_blank' rel="noreferrer">Circles.Life</Link>.
                 </p>
                 <p>
                 Here are some technologies that I&apos;ve been working with recently:
@@ -278,6 +274,7 @@ export function MainPage (): JSX.Element {
           </Box>
 				</Box>
 			</Box>
+      <SocialsBar />
 		</Box>
   )
 }
