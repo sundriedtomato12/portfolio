@@ -13,6 +13,9 @@ export const colorPalette = {
     lightest: '#ccd6f6'
   },
   white: '#e6f1ff',
-  green: '#64ffda',
+  green: {
+    light: '#64ffda',
+    dark: '#35c4a2'
+  },
   blue: '#57cbff'
 }
