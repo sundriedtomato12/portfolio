@@ -6,8 +6,10 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import { colorPalette } from '../styles/colorTheme'
 
 export function SocialsBar (): JSX.Element {
+  const isDesktop = useMediaQuery('(min-width:800px)')
+
   const iconStyle = {
-    fontSize: '32px',
+    fontSize: isDesktop ? '32px' : '25px',
     color: colorPalette.white,
     '&:hover': {
       transform: 'translateY(-1px)',
@@ -15,7 +17,6 @@ export function SocialsBar (): JSX.Element {
       cursor: 'pointer'
     }
   }
-  const isDesktop = useMediaQuery('(min-width:800px)')
 
   return (
     <Box sx={{ position: 'absolute', left: isDesktop ? '20px' : '2.5vw', bottom: '0px' }}>

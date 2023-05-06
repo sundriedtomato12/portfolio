@@ -101,7 +101,7 @@ export function MainPage (): JSX.Element {
           <Typography sx={{ mt: isDesktop ? '15vh' : '10vh', mb: '16px', fontSize: isDesktop ? '32px' : '24px', fontWeight: 700, fontFamily: 'Fira Code', color: colorPalette.green.light }}>
             Projects
           </Typography>
-           <Typography sx={{ fontSize: '16px', fontFamily: 'Roboto', mb: '20px' }}>Check out some stuff I built!</Typography>
+           <Typography sx={{ fontSize: '16px', fontFamily: 'Roboto', mb: '20px' }}>{isDesktop ? 'Check out some stuff I built! Click on each slide to view more details.' : 'Swipe to view more projects, or tap on each slide to view more details.'}</Typography>
           <Box height={'60vh'}>
             <Swiper
               direction={'horizontal'}
