@@ -48,7 +48,7 @@ export function MainPage (): JSX.Element {
     <Box style={{ width: '100%' }}>
 			<NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
 			<Box ref={ref} onScroll={() => { handleScroll(ref, setCurrentPage) }} className='main-page' style={{ height: '100vh', backgroundColor: colorPalette.navy.dark, overflowY: 'scroll', padding: isDesktop ? '0px 24px 0px 24px' : '0px 10px 0px 10px' }}>
-				<Box id="home" height={'100vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center', color: colorPalette.white }}>
+				<Box id="home" height={'100vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center', color: colorPalette.white, maxWidth: '1200px' }}>
           <Box sx={{ display: isDesktop ? 'flex' : 'block' }}>
 					<Typography sx={{ fontSize: isDesktop ? '32px' : '24px', color: colorPalette.green.light, fontFamily: 'Roboto', marginRight: '12px' }}>
             Hey! My name is</Typography>
@@ -65,12 +65,12 @@ export function MainPage (): JSX.Element {
             I&apos;m a Full Stack Developer based in Singapore with a passion for learning new tech stacks and building innovative products for the web. With a keen eye for design and a dedication to creating outstanding user interfaces, I take pride in my ability to bring fresh product ideas to life.
 					</Typography>
 				</Box>
-				<Box id="about" height={isDesktop ? '100vh' : 'fit-content'} sx={{ pb: isDesktop ? 0 : '16vh', paddingX: '10vw', display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'left', color: colorPalette.white }}>
+				<Box id="about" height={isDesktop ? '100vh' : 'fit-content'} sx={{ pb: isDesktop ? 0 : '16vh', paddingX: '10vw', display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'left', color: colorPalette.white, maxWidth: '1000px' }}>
           <Typography sx={{ marginTop: isDesktop ? '15vh' : '10vh', fontSize: isDesktop ? '32px' : '24px', fontWeight: 700, fontFamily: 'Fira Code', color: colorPalette.green.light }}>
             About me
           </Typography>
           <Grid container sx={{ display: 'flex', flexDirection: isDesktop ? 'row-reverse' : 'column', alignItems: 'center' }} spacing={isDesktop ? 6 : undefined}>
-            <Grid item xs={isDesktop ? 3 : undefined}>
+            <Grid item xs={isDesktop ? 3 : undefined} sx={{ display: 'flex', justifyContent: isDesktop ? 'right' : 'center' }}>
               <Box component='img' src={Profile} sx={{ marginTop: isDesktop ? '0px' : '16px', height: 'clamp(120px, 20vh, 160px)', width: 'auto', overflow: 'clip', borderRadius: '100px' }}/>
             </Grid>
             <Grid item xs={isDesktop ? 9 : undefined}>
@@ -97,7 +97,7 @@ export function MainPage (): JSX.Element {
             </Grid>
         </Grid>
         </Box>
-				<Box id="projects" height={'100vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'left', color: colorPalette.white }}>
+				<Box id="projects" height={'100vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'left', color: colorPalette.white, maxWidth: '1200px' }}>
           <Typography sx={{ mt: isDesktop ? '15vh' : '10vh', mb: '16px', fontSize: isDesktop ? '32px' : '24px', fontWeight: 700, fontFamily: 'Fira Code', color: colorPalette.green.light }}>
             Projects
           </Typography>
@@ -121,7 +121,7 @@ export function MainPage (): JSX.Element {
             </Swiper>
           </Box>
 				</Box>
-				<Box id="contact" height={'70vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', color: colorPalette.white }}>
+				<Box id="contact" height={'72vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', color: colorPalette.white, maxWidth: '1200px' }}>
           <Box sx={{ display: 'flex', alignItems: 'left', flexDirection: 'column' }}>
           <Typography sx={{ marginTop: isDesktop ? '15vh' : '8vh', fontSize: '28px', fontWeight: 700, fontFamily: 'Fira Code', color: colorPalette.green.light }}>
             Get in touch

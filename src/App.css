@@ -50,7 +50,6 @@
   scroll-behavior: smooth;
 }
 
-.project-swiper .swiper-button-next::after {
-  height: 20px !important;
-  color: '#64ffda' !important;
+:root {
+    --swiper-theme-color: #e6f1ff !important;
 }
