@@ -8,29 +8,22 @@ import { colorPalette } from '../styles/colorTheme'
 export function SocialsBar (): JSX.Element {
   const isDesktop = useMediaQuery('(min-width:800px)')
 
-  const iconStyle = {
-    fontSize: isDesktop ? '32px' : '25px',
-    color: colorPalette.white,
-    '&:hover': {
-      transform: 'translateY(-1px)',
-      color: colorPalette.green.light,
-      cursor: 'pointer'
-    }
-  }
-
   return (
     <Box sx={{ position: 'absolute', left: isDesktop ? '20px' : '2.5vw', bottom: '0px' }}>
     <Stack direction='column' spacing={2} alignItems={'center'}>
             <MailIcon
-            sx={{ ...iconStyle }}
+            className='icon'
+            sx={{ fontSize: isDesktop ? '32px' : '25px' }}
             onClick={() => window.open('mailto:felicia.tanwp@gmail.com', '_blank')}
             />
             <LinkedInIcon
-            sx={{ ...iconStyle }}
+            className='icon'
+            sx={{ fontSize: isDesktop ? '32px' : '25px' }}
             onClick={() => window.open('https://www.linkedin.com/in/-fel', '_blank')}
             />
             <GitHubIcon
-            sx={{ ...iconStyle }}
+            className='icon'
+            sx={{ fontSize: isDesktop ? '32px' : '25px' }}
             onClick={() => window.open('https://www.github.com/sundriedtomato12', '_blank')}
             />
             <Box sx={{ width: '1px', height: '100px', backgroundColor: colorPalette.white }}>

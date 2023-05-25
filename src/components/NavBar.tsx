@@ -11,6 +11,7 @@ interface NavBarProps {
 export function NavBar ({ currentPage, setCurrentPage }: NavBarProps): JSX.Element {
   const isDesktop = useMediaQuery('(min-width:800px)')
   const logo = '<f>'
+
   return (
 		<AppBar position='fixed' className='navbar' sx={{ height: '48px', width: '100%', zIndex: 999, backgroundColor: colorPalette.navy.normal, boxShadow: '0 7px 14px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.2)', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', px: isDesktop ? '22px' : '14px' }}>
       <Box component={'a'} sx={{

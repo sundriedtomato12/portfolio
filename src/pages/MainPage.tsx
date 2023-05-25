@@ -19,16 +19,6 @@ import { ProjectDialog } from '../components/ProjectDialog'
 import { Slide } from '../components/Slide'
 import { handleScroll } from '../assets/helper/handleScroll'
 
-const iconStyle = {
-  fontSize: '36px',
-  color: colorPalette.white,
-  '&:hover': {
-    transform: 'translateY(-1px)',
-    color: colorPalette.green.light,
-    cursor: 'pointer'
-  }
-}
-
 export function MainPage (): JSX.Element {
   const [isSlideClicked, setIsSlideClicked] = useState<boolean>(false)
   const [slideClicked, setSlideClicked] = useState<ProjectType>(projects[0])
@@ -43,6 +33,8 @@ export function MainPage (): JSX.Element {
   function handleDialogClose (): void {
     setIsSlideClicked(false)
   }
+
+  const projectSlides = projects.map((project) => <SwiperSlide key={project.name}><Slide isDesktop={isDesktop} setIsSlideClicked={setIsSlideClicked} name={project.name} description={project.short} thumbnail={project.thumbnail} url={project.url} githubUrl={project.githubUrl} /></SwiperSlide>)
 
   return (
     <Box style={{ width: '100%' }}>
@@ -71,16 +63,14 @@ export function MainPage (): JSX.Element {
           </Typography>
           <Grid container sx={{ display: 'flex', flexDirection: isDesktop ? 'row-reverse' : 'column', alignItems: 'center' }} spacing={isDesktop ? 6 : undefined}>
             <Grid item xs={isDesktop ? 3 : undefined} sx={{ display: 'flex', justifyContent: isDesktop ? 'right' : 'center' }}>
-              <Box component='img' src={Profile} sx={{ marginTop: isDesktop ? '0px' : '16px', height: 'clamp(120px, 20vh, 160px)', width: 'auto', overflow: 'clip', borderRadius: '100px' }}/>
+              <Box component='img' className='profile' src={Profile} sx={{ marginTop: isDesktop ? '0px' : '16px', height: 'clamp(120px, 20vh, 160px)', width: 'auto', overflow: 'clip', borderRadius: '100px' }}/>
             </Grid>
             <Grid item xs={isDesktop ? 9 : undefined}>
               <Typography sx={{ fontSize: '16px', fontFamily: 'Roboto' }}>
-                <p>
-                Hello! I&apos;m Fel. My interest in web development started in high school when I learnt how to do stuff like customising my cursor and changing the color and font of my Blogspot.com chatbox (hello millenials?). But I only decided to pursue software engineering as a career in 2021 by signing up for a bootcamp by <Link href='https://www.rocketacademy.co' sx={{ textDecoration: 'none', color: colorPalette.green.light, '&:hover': { textDecoration: 'underline', color: colorPalette.green.light } }} target='_blank' rel="noreferrer">Rocket Academy.</Link> Since graduating, I&apos;ve done multiple personal projects and I&apos;m currently building game-changing digital products at <Link href='https://www.circles.life' sx={{ textDecoration: 'none', color: colorPalette.green.light, '&:hover': { textDecoration: 'underline', color: colorPalette.green.light } }} target='_blank' rel="noreferrer">Circles.Life</Link>.
-                </p>
-                <p>
+                Hello! I&apos;m Fel. My interest in web development started in high school when I learnt how to do stuff like customising my cursor and changing the color and font of my Blogspot.com chatbox (hello millenials?). But I only decided to pursue software engineering as a career in 2021 by signing up for a bootcamp by <Link className='text-link' href='https://www.rocketacademy.co' target='_blank' rel="noreferrer">Rocket Academy.</Link> Since graduating, I&apos;ve done multiple personal projects and I&apos;m currently building game-changing digital products at <Link className='text-link' href='https://www.circles.life' target='_blank' rel="noreferrer">Circles.Life</Link>.
+              </Typography>
+              <Typography sx={{ fontSize: '16px', fontFamily: 'Roboto', my: '6px' }}>
                 Here are some technologies that I&apos;ve been working with recently:
-                </p>
               </Typography>
               <Grid container item sx={{ display: 'flex', flexDirection: 'row' }}>
                 <Stack sx={{ marginRight: '24px' }}>
@@ -115,11 +105,10 @@ export function MainPage (): JSX.Element {
                 setSlideClicked(projects[slide.activeIndex])
               }}
             >
-              <ProjectDialog isSlideClicked={isSlideClicked} isDesktop={isDesktop} handleDialogClose={handleDialogClose} name={slideClicked.name} description={slideClicked.description} video={slideClicked.video} url={slideClicked.url} githubUrl={slideClicked.githubUrl} technologies={slideClicked.technologies} />
-              {projects.map((project) => <SwiperSlide key={project.name}><Slide isDesktop={isDesktop} setIsSlideClicked={setIsSlideClicked} name={project.name} description={project.short} thumbnail={project.thumbnail} url={project.url} githubUrl={project.githubUrl} /></SwiperSlide>)
-              }
+              {projectSlides}
             </Swiper>
           </Box>
+          <ProjectDialog isSlideClicked={isSlideClicked} isDesktop={isDesktop} handleDialogClose={handleDialogClose} name={slideClicked.name} description={slideClicked.description} video={slideClicked.video} url={slideClicked.url} githubUrl={slideClicked.githubUrl} technologies={slideClicked.technologies} />
 				</Box>
 				<Box id="contact" height={'72vh'} sx={{ paddingX: '10vw', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', color: colorPalette.white, maxWidth: '1200px' }}>
           <Box sx={{ display: 'flex', alignItems: 'left', flexDirection: 'column' }}>
@@ -131,22 +120,26 @@ export function MainPage (): JSX.Element {
 					</Typography>
           <Box sx={{ mt: '14px' }}>
             <MailIcon
-            sx={{ ...iconStyle, mr: '12px' }}
+            className='icon'
+            sx={{ fontSize: '32px', mr: '12px' }}
             onClick={() => window.open('mailto:felicia.tanwp@gmail.com', '_blank')}
             />
             <LinkedInIcon
-            sx={{ ...iconStyle, mr: '12px' }}
+            className='icon'
+            sx={{ fontSize: '32px', mr: '12px' }}
             onClick={() => window.open('https://www.linkedin.com/in/-fel', '_blank')}
             />
             <GitHubIcon
-            sx={{ ...iconStyle }}
+            sx={{ fontSize: '32px' }}
+            className='icon'
             onClick={() => window.open('https://www.github.com/sundriedtomato12', '_blank')}
             />
           </Box>
           </Box>
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pb: '10px' }}>
             <Typography fontSize={isDesktop ? '13px' : '10px'} fontFamily={'Fira Code'} color={colorPalette.slate.light} >Built by Felicia Tan, 2023</Typography><GitHubIcon
-            sx={{ ...iconStyle, fontSize: isDesktop ? '14px' : '10px', color: colorPalette.slate.light, ml: '6px', mb: '2px' }}
+            className='icon'
+            sx={{ fontSize: isDesktop ? '14px' : '10px', color: colorPalette.slate.light, ml: '6px', mb: '2px' }}
             onClick={() => window.open('https://github.com/sundriedtomato12/portfolio', '_blank')}
             />
           </Box>

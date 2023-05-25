@@ -53,3 +53,23 @@
 :root {
     --swiper-theme-color: #e6f1ff !important;
 }
+
+a.text-link {
+  text-decoration: none !important;
+  color: #64ffda !important;
+}
+
+a.text-link:hover {
+  text-decoration: underline !important;
+  color: #64ffda !important;
+}
+
+.icon {
+  color: #e6f1ff;
+}
+
+.icon:hover {
+  transform: translateY(-1px);
+  color: #64ffda;
+  cursor: pointer;
+}

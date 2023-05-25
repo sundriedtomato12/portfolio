@@ -17,9 +17,9 @@ export function ProjectDialog (props: { name: string, description: string, video
             </Box>
             <Typography sx={{ fontFamily: 'Roboto', fontSize: props.isDesktop ? '16px' : '12px' }}>{props.description} Built using {props.technologies.map((tech, index) => {
               if (index === props.technologies.length - 1) {
-                return <><b>{tech}</b>.</>
+                return <p key={tech}><b>{tech}</b>.</p>
               } else {
-                return <><b>{tech}</b>, </>
+                return <p key={tech}><b>{tech}</b>, </p>
               }
             })}</Typography>
           </Box>
