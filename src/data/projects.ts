@@ -5,7 +5,7 @@ import KevinTheInternThumbnail from '../assets/images/kevin-the-intern-thumbnail
 import SnippetsDemo from '../assets/videos/snippets-demo.mp4'
 import CombatChicksDemo from '../assets/videos/combat-chicks-demo.mp4'
 import PorkyPrintsDemo from '../assets/videos/porky-prints-demo.mp4'
-import KevinDemo from '../assets/videos/kevin_demo.mp4'
+import KevinDemo from '../assets/videos/kevin-demo.mp4'
 
 export interface ProjectType {
   name: string
