@@ -17,11 +17,12 @@ export function ProjectDialog (props: { name: string, description: string, video
             </Box>
             <Typography sx={{ fontFamily: 'Roboto', fontSize: props.isDesktop ? '16px' : '12px' }}>{props.description} Built using {props.technologies.map((tech, index) => {
               if (index === props.technologies.length - 1) {
-                return <p key={tech}><b>{tech}</b>.</p>
+                return <React.Fragment key={index}><b>{tech}</b>.</React.Fragment>
               } else {
-                return <p key={tech}><b>{tech}</b>, </p>
+                return <React.Fragment key={index}><b>{tech}</b>, </React.Fragment>
               }
-            })}</Typography>
+            })}
+</Typography>
           </Box>
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: props.isDesktop ? '44vh' : '60%' }}>
             <Box component={'video'} src={props.video} autoPlay loop playsInline muted disablePictureInPicture maxHeight={'100%'} maxWidth={'100%'} sx={{ borderRadius: '4px' }} />
