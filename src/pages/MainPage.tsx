@@ -67,21 +67,21 @@ export function MainPage (): JSX.Element {
             </Grid>
             <Grid item xs={isDesktop ? 9 : undefined}>
               <Typography sx={{ fontSize: '16px', fontFamily: 'Roboto' }}>
-                Hello! I&apos;m Fel. My interest in web development started in high school when I learnt how to do stuff like customising my cursor and changing the color and font of my Blogspot.com chatbox (hello millenials?). But I only decided to pursue software engineering as a career in 2021 by signing up for a bootcamp by <Link className='text-link' href='https://www.rocketacademy.co' target='_blank' rel="noreferrer">Rocket Academy.</Link> Since graduating, I&apos;ve done multiple personal projects and I&apos;m currently building game-changing digital products at <Link className='text-link' href='https://www.circles.life' target='_blank' rel="noreferrer">Circles.Life</Link>.
+                Hello! I&apos;m Fel. My interest in web development started in high school when I learnt how to do stuff like customising my cursor and changing the color and font of my Blogspot.com chatbox (hello millenials?). But I only decided to pursue software engineering as a career in 2021 by signing up for a bootcamp by <Link className='text-link' href='https://www.rocketacademy.co' target='_blank' rel="noreferrer">Rocket Academy.</Link> Since graduating, I&apos;ve done multiple personal projects and built game-changing digital products at <Link className='text-link' href='https://www.circles.life' target='_blank' rel="noreferrer">Circles.Life</Link>. I&apos;m currently building more cool stuff at <Link className='text-link' href='https://www.liquidxgroup.xyz' target='_blank' rel="noreferrer">LiquidX Studio</Link> under <Link className='text-link' href='https://pixelmon.ai' target='_blank' rel="noreferrer">Pixelmon</Link>.
               </Typography>
               <Typography sx={{ fontSize: '16px', fontFamily: 'Roboto', my: '6px' }}>
                 Here are some technologies that I&apos;ve been working with recently:
               </Typography>
               <Grid container item sx={{ display: 'flex', flexDirection: 'row' }}>
                 <Stack sx={{ marginRight: '24px' }}>
-                  <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>Typescript</Typography>
                   <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>Javascript</Typography>
                   <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>React</Typography>
+                  <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>NextJs</Typography>
                 </Stack>
                 <Stack>
-                  <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>React Native</Typography>
-                  <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>NextJs</Typography>
-                  <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>NodeJs</Typography>
+                  <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>Python</Typography>
+                  <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>Unity</Typography>
+                  <Typography sx={{ display: 'flex' }}><GreenArrowIcon/>Solidity</Typography>
                 </Stack>
               </Grid>
             </Grid>
